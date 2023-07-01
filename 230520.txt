@@ -1,0 +1,35 @@
+비주얼스튜디오 
+html tag wrapper
+live server
+open in browser
+auto rename tag 앞에 태그 뒤에태그가 같이 만들어짐
+
+클래스명 쓰는 방법 
+
+settings > word separators >'-' 지우기
+
+shift+1 "!" > tab 
+
+jquery  리엑트 뷰 react recoil 챗 
+
+복사 shift +alt+방향키
+여러줄 주석 shift+alt+a
+한줄 주석 ctrl+k+c
+주석해제 ctrl+k+u
+브라우저 열기 alt+b
+화면 전환 alt+tab
+줄바꿈 alt+z
+
+https://developer.mozilla.org/ko/docs/Web/JavaScript
+
+
+여러줄 동시에 쓰기 shift+alt+ctrl 커서 이동 
+더미텍스트 'lorem'+tab + enter
+한줄 복사shift+alt+방향키
+
+카멜표기법
+자바스크립트 이벤트 참고
+
+23.06.17
+form 태그는 id를 주로 씀
+

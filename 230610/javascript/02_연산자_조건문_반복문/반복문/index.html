@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문 종류</title>
+    <script src="./js/script.js"></script>
+</head>
+<body>
+    <button onclick="colorBg()">배경색바꾸기 버튼</button>
+    <h1>반복문</h1>
+    <h2>for</h2>
+    <ul id="for">
+
+    </ul>
+    <h2>forEach</h2>
+    <ul id="foreach">
+
+    </ul>
+    <h2>for of</h2>
+    <ul id="forof">
+
+    </ul>
+    <h2>for in</h2>
+    <ul id="forin">
+
+    </ul>
+    <h2>do/while</h2>
+    <ul id="dowhile">
+
+    </ul>
+
+    <script>
+        const colors=["yellow","aqua", "purple", "pink"];
+        let cnt=0;
+        function colorBg(){
+            if(cnt>=colors.length) cnt=0;
+            const bodyTag=document.getElementsByTagName('body')[0];
+            bodyTag.style.backgroundColor=colors[cnt];
+            cnt++;
+        }
+        let fruits=["cherry", "apple","banana",'파인애플', '메론'];
+        
+        
+        for(let i=0; i<fruits.length; i++){
+            //document.getElementById('for').innerHTML +='<li>' + fruits[i]+'</li>'
+            document.getElementById('for').innerHTML +=`<li> ${fruits[i]}</li>`;
+        }
+
+        const $for=document.querySelectorAll('#for li');
+        //console.log($for)
+        /* $for[0].style.color='pink';
+        $for[1].style.color='pink';
+        $for[2].style.color='pink'; */
+        for(let i=0; i<$for.length; i++){
+            $for[i].style.color='pink';
+        }
+
+        //foreach 무조건 배열
+        fruits.forEach(function(fruit, index, array){
+           // document.getElementById('foreach').innerHTML+=`<li> ${fruit}</li>`
+            document.getElementById('foreach').innerHTML+=`<li> ${fruits[index]}</li>`
+        })
+
+        const $foreach=document.querySelectorAll('#foreach li');
+        //console.log($foreach)
+        $foreach.forEach(function(item, index){
+            item.style.color='red';
+           $foreach[index].addEventListener('mouseover',function(){
+            this.style.color="green"
+           })
+           $foreach[index].addEventListener('mouseout',function(){
+            this.style.color="orange"
+           })
+          
+        })
+        //for of
+        let item;
+        for(item of fruits){
+            document.getElementById('forof').innerHTML += `<li>${item}</li>`
+        }
+        const $forof=document.querySelectorAll('#forof li');
+        let foro;
+        for(foro of $forof){
+            foro.addEventListener('mouseover', function(){
+                this.style.color='red';
+                this.style.backgroundColor='yellow';
+            })
+            foro.addEventListener('mouseout', function(){
+                this.style.color='green';
+                this.style.backgroundColor='white';
+            })
+        }
+
+        //dowhile
+        let dowh=0;
+        do{
+            document.getElementById('dowhile').innerHTML+=`<li>${fruits[dowh]}</li>`;
+            dowh++;
+        }while(dowh<fruits.length)
+
+        const $dowhile=document.querySelectorAll('#dowhile li');
+        let dowh1=0;
+        do{
+           $dowhile[dowh1].style.color='blue';
+
+            dowh1++;
+        }while(dowh1 < $dowhile.length)
+
+
+
+        //for in객체 내의 값들마다 할일(property + method)
+        let preson={pname:'jeehyun', page:'44', pgender:'여성'}
+        let y;
+         for(y in preson){
+            document.getElementById('forin').innerHTML += `<li>${y} : ${preson[y]}</li>`
+         }
+
+    </script>
+</body>
+</html>

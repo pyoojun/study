@@ -1,0 +1,34 @@
+*{margin: 0; padding: 0;}
+body{background: #ddd;}
+#wrap{width: 1000px; margin: 0 auto; padding: 20px;}
+.box{background: #fff; padding: 20px; margin-bottom: 10px;}
+h2{text-align: center;}
+.content{border: 2px solid #dba2f7; padding: 20px; margin-bottom: 10px;}
+h3{margin-bottom: 20px;}
+
+.after{width: 500px; height: 250px; margin: 30px auto;}
+.after p{margin-bottom: 5px; border: 1px solid #ddd; padding: 5px 20px}
+
+.append{width: 500px; margin: 20px auto; color: #fff;}
+#basket{background: #7e452a; padding:10px}
+#apple{background: red; padding:5px margin:5px;}
+#banana{background: yellow; padding:5px margin:5px;}
+#orange {background: #ff843c; padding:5px margin:5px;}
+
+.content3 > div{border:3px solid yellowgreen margin-botom:5px;}
+.content3 > #div1{display: ;}
+
+.content4{height: 500px;}
+.content4 #btn{display: block; padding:10px 20px; margin-bottom: 10px; border:none;}
+.content4 img{display: none;}
+
+.content5 > div {font-size: 3.5em;}
+.container{height: 120px;}
+#fade1{background: #dba2f7; display: none;}
+#fade2{background: #abff5d;}
+#fade3{background: #46a5ff;}
+
+.content6 > div {font-size: 3.5em;}
+#slide1{background: #dba2f7; display: none;}
+#slide2{background: #abff5d;}
+#slide3{background: #3895ff;}
